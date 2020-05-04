@@ -1,10 +1,10 @@
 all: c a m u
 a: c
-	clang -fsanitize=address *.c && ./a.out
+	clang -fsanitize=address *.c ../sha512.c && ./a.out
 m: c
-	clang -fsanitize=memory *.c && ./a.out
+	clang -fsanitize=memory *.c ../sha512.c && ./a.out
 u: c
-	clang -fsanitize=undefined *.c && ./a.out
+	clang -fsanitize=undefined *.c ../sha512.c && ./a.out
 mike:
 	cat *.c > mike.c
 ccomp: c mike
