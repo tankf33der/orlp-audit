@@ -15,7 +15,7 @@ typedef uint8_t u8;
 void audit(void) {
     ARRAY(seed, 32);
     ARRAY(pub,  32);
-    ARRAY(key,  32);
+    ARRAY(key,  64);
     ARRAY(hash, 64);
 
     ed25519_create_keypair(pub, key, seed);
